@@ -11,15 +11,24 @@
     pulaLinha();
   }
 
-  function a(numero1, numero2) {
-    return numero1 + numero2;
+  function a(texto) {
+
+    return "(" + texto + ")";
   }
 
-  function b(numero1, numero2) {
-    return numero1 / numero2;
+  function b(texto) {
+
+    return "@" + texto + "@";
   }
 
-  var resultado = a(10, 20) + b(30, 2);
+  function c(nome, sobrenome) {
+
+    return b(nome + " " + a(sobrenome));
+
+  }
+
+  var resultado = c("Flávio", "Almeida");
 
   mostra(resultado);
+
 </script>
