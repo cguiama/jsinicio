@@ -2,7 +2,6 @@
 
 <script>
   function pulaLinha() {
-
     document.write("<br>");
   }
 
@@ -11,11 +10,15 @@
     pulaLinha();
   }
 
-  var convidados = parseInt(prompt("Número de convidados"));
-  var vips = parseInt(prompt("Número de convidados Vip's'"));
+  var contador = 1;
+  while (contador <= 100) {
 
-  var total = convidados + vips
+    //toda vez que o resto da divisão for zero o resultado será um número par.
 
-  mostra("O total de convidados é " + total);
-
+    if (contador % 2 == 0) {
+      mostra(contador);
+    }
+    contador = contador + 1;
+  }
+  mostra(fim);
 </script>
