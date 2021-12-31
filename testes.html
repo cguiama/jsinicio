@@ -1,25 +1,25 @@
 <meta charset="UTF-8">
+
 <script>
-  //Teste diferença de idade
   function pulaLinha() {
+
     document.write("<br>");
   }
-  function write(message) {
-    document.write(message);
+
+  function mostra(frase) {
+    document.write(frase);
     pulaLinha();
   }
-  var ano = 2021;
-  var idadeRicardo = (ano - 1996);
-  var idadeGuiulherme = (ano - 1991);
 
-  write("Nossa diferença de idade é de " + (idadeGuiulherme - idadeRicardo) + " anos");
+  function a(numero1, numero2) {
+    return numero1 + numero2;
+  }
 
-  //teste gerações
+  function b(numero1, numero2) {
+    return numero1 / numero2;
+  }
 
-  var descobrimento = 1500;
-  var geracao = ((ano - descobrimento) / 10);
+  var resultado = a(10, 20) + b(30, 2);
 
-  write("Desde o descobrimento do brasil se passaram " + (ano - descobrimento) + " anos")
-  write("Se cada geração acontece a cada 28 anos, temos um total de " + Math.round(geracao) + " gerações");
-
+  mostra(resultado);
 </script>
