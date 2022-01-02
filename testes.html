@@ -10,13 +10,27 @@
     pulaLinha();
   }
 
-  var contador = 20;
+  var loginCadastrado = "alura";
+  var senhaCadastrada = "alura321";
 
-  while (contador >= 0) {
+  var tentativa = 3;
 
-    mostra(contador);
-    contador = contador + -1;
+  while (tentativa >= 1) {
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+    if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+
+      alert("Bem-vindo ao sistema " + loginInformado);
+      tentativa = tentativa - 3;
+    }
+    else if (tentativa == 1) {
+      alert("Máximo de tentativas ultrapassadas!");
+    }
+    else {
+      alert("Login inválido. Tente novamente");
+    }
+    tentativa = tentativa - 1;
   }
 
-  mostra("FIM");
 </script>
