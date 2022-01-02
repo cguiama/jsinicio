@@ -19,22 +19,34 @@
 
   var numeroPensado = sorteia(10);
 
-
+  var tentativas = 1;
   var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
 
-  if (chute == numeroPensado) {
+  while (tentativas <= 3) {
 
-    mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
-  } else {
+    if (chute == numeroPensado) {
 
-    if (chute > numeroPensado) {
-
-      mostra("Você errou! Seu chute é maior que o número pensado!");
-
+      mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+      break;
     } else {
 
-      mostra("Você errou! Seu chute é menor que o número pensado!");
+      if (chute > numeroPensado) {
+
+        mostra("Você errou! Seu chute é maior que o número pensado!");
+
+      } else {
+
+        mostra("Você errou! Seu chute é menor que o número pensado!");
+      }
+      tentativas++;
     }
 
   }
+
+  if (talkingTooMuch) {
+    break;
+  }
+  var listen = true;
+
+
 </script>
