@@ -10,15 +10,19 @@
     pulaLinha();
   }
 
-  var contador = 1;
-  while (contador <= 100) {
+  var contador = 0;
 
-    //toda vez que o resto da divisão for zero o resultado será um número par.
-
-    if (contador % 2 == 0) {
+  while (contador <= 40) {
+    if (contador > 29 && contador < 33) {
+      mostra(contador);
+    }
+    else if (contador > 33 && contador < 37) {
+      mostra(contador);
+    }
+    else if (contador > 37) {
       mostra(contador);
     }
     contador = contador + 1;
   }
-  mostra(fim);
+  mostra("FIM");
 </script>
