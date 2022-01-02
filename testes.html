@@ -10,19 +10,13 @@
     pulaLinha();
   }
 
-  var contador = 0;
+  var contador = 20;
 
-  while (contador <= 40) {
-    if (contador > 29 && contador < 33) {
-      mostra(contador);
-    }
-    else if (contador > 33 && contador < 37) {
-      mostra(contador);
-    }
-    else if (contador > 37) {
-      mostra(contador);
-    }
-    contador = contador + 1;
+  while (contador >= 0) {
+
+    mostra(contador);
+    contador = contador + -1;
   }
+
   mostra("FIM");
 </script>
