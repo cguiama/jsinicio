@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+
+  function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+  }
+
+
+  var multiplicador = 1;
+  alert("Eu sou o mago da tabuada! Vamos lá!");
+  var nome = prompt("Qual é o seu nome?");
+  var tabuada = parseInt(prompt("Olá " + nome + ", qual tabuada você quer saber?"));
+
+  while (isNaN(tabuada)) {
+    alert("Você precisa digitar um número...")
+    var tabuada = parseInt(prompt("Qual tabuada você quer saber?"));
+
+  }
+  var tabuadamax = parseInt(prompt("Até quantas vezes você quer multiplicar?"))
+  while (isNaN(tabuadamax)) {
+    alert("Acho que você precisa voltar pras aulas de interpretação de texto!")
+    var tabuadamax = parseInt(prompt("Até quantas vezes você quer multiplicar?"));
+
+  }
+  for (multiplicador = 1; multiplicador <= tabuadamax; multiplicador = multiplicador + 1) {
+    mostra("A multiplicação de " + tabuada + " vezes " + multiplicador + " é " + tabuada * multiplicador);
+  }
+
+</script>
